@@ -43,6 +43,14 @@ the_store.start();
 @inject("store")
 @observer
 class Reset extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      foo: 1
+    }
+  }
+
   render() {
     const { store } = this.props;
     return (
@@ -59,6 +67,14 @@ class Reset extends Component {
 }
 
 class App extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      bar: 1
+    }
+  }
+
   render() {
     return (
       <Provider store={the_store}>
